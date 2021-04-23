@@ -1,0 +1,68 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U darbolbinario%b	darbolbinario.adb	1f26993a NE OO PK GE IL
+
+U darbolbinario%s	darbolbinario.ads	5add0a4a BN EE NE OO PK GE IL
+
+D darbolbinario.ads	20210419154318 5add0a4a darbolbinario%s
+D darbolbinario.adb	20210419154132 45fb9370 darbolbinario%b
+D system.ads		20190518041258 32a08138 system%s
+G a e
+G c Z s b [darbolbinario standard 4 9 none]
+X 1 darbolbinario.ads
+3+9 elem 13r59 14r40 23r10 2|17r58 29r39
+4k9*darbolbinario 3z9 19E9 31l5 31e18 2|1b14 57l5 57t18
+6R9*arbol 11r29 12r31 13r28 13r46 14r26 15r25 15r40 16r25 16r40 27c9 29e14
+. 2|4r28 10r30 17r27 17r45 29r25 38r24 38r39 48r24 48r39
+8X4*mal_uso 2|34r38 44r38 54r38
+9X4*espacio_desbordado 2|25r35
+11U14*avacio 11<22 2|4b14 8l8 8t14
+11r22 t{6R9} 2|4b21 5m24 5r24
+12V13*esta_vacio{boolean} 12>25 2|10b13 14l8 14t18
+12r25 t{6R9} 2|10b24 11r24
+13U14*graft 13<21 13>35 13>39 13>53 2|17b14 26l8 26t13
+13r21 t{6R9} 2|17b20 18m24 18r24
+13r35 lt{6R9} 2|17b34 19r25
+13r39 rt{6R9} 2|17b38 20r25
+13*53 x{3+9} 2|17b52 23r16
+14U14*raiz 14>20 14<33 2|29b14 35l8 35t12
+14r20 t{6R9} 2|29b19 30r24
+14*33 x{3+9} 2|29b32 32m7
+15U14*izq 15>19 15<32 2|38b14 45l8 45t11
+15r19 t{6R9} 2|38b18 39r24
+15r32 lt{6R9} 2|38b31 40m25 40r25
+16U14*der 16>19 16<32 2|48b14 55l8 55t11
+16r19 t{6R9} 2|48b18 49r24
+16r32 rt{6R9} 2|48b31 50m25 50r25
+19R9 nodo 20r25 22c9 25e14 2|22r15
+20P9 pnodo(19R9) 24r13 28r13 2|5r10 11r10 18r10 19r11 20r11 30r10 39r10 40r11
+. 49r10 50r11
+23*7 x{3+9} 2|32r13
+24p7 l{20P9} 2|42r14
+24p10 r{20P9} 2|52r14
+28p7 raiz{20P9} 2|5m26 11m26 18m26 19m28 20m28 30m26 39m26 40m28 49m26 50m28
+X 2 darbolbinario.adb
+5p7 p{1|20P9} 7r7
+11p7 p{1|20P9} 13r14
+18p7 p{1|20P9} 22r7 23r7
+19p7 pl{1|20P9} 23r19
+20p7 pr{1|20P9} 23r23
+30p7 p{1|20P9} 32r11
+39p7 p{1|20P9} 42r12
+40p7 pl{1|20P9} 42r7
+49p7 p{1|20P9} 52r12
+50p7 pr{1|20P9} 52r7
+

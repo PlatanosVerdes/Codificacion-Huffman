@@ -1,0 +1,64 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U d_priority_queue%b	d_priority_queue.adb	b7f4635f NE OO PK GE IL
+
+U d_priority_queue%s	d_priority_queue.ads	07464a0e BN EE NE OO PK GE IL
+
+D d_priority_queue.ads	20210419151348 07464a0e d_priority_queue%s
+D d_priority_queue.adb	20210419152956 b0b22951 d_priority_queue%b
+D system.ads		20190518041258 32a08138 system%s
+G a e
+G c Z s b [d_priority_queue standard 6 9 none]
+X 1 d_priority_queue.ads
+2i4 size{positive} 17r32 2|32r12
+3+9 item 4r34 5r34 11r53 13r54 17r41 2|17r54 26r53 44r11
+4V19 "<"{boolean} 4>23 4>26 2|51s36 52s36 54s39
+4*23 x1{3+9}
+4*26 x2{3+9}
+5V19 ">"{boolean} 5>23 5>26 2|34s35
+5*23 x1{3+9}
+5*26 x2{3+9}
+6k9*d_priority_queue 2z4 3z9 4z19 5z19 17E9 22l5 22e21 2|1b14 59l5 59t21
+7R9*priority_queue 10r29 11r30 12r39 13r31 14r29 18c9 21e14 2|3r29 10r29
+. 17r31 26r30 41r39
+8X4*space_overflow 2|32r28
+9X4*bad_use 2|21r26 48r26
+10U14*empty 10<21 2|3b14 7l8 7t13
+10r21 q{7R9} 2|3b21 4m26 4r26
+11U14*put 11=19 11>46 2|26b14 38l8 38t11
+11r19 q{7R9} 2|26b19 27m29 27r29 28m27 28r27
+11*46 x{3+9} 2|26b46 34r37 37r14
+12U14*delete_least 12=28 2|41b14 57l8 57t20
+12r28 q{7R9} 2|41b28 42m28 42r28 43m27 43r27
+13V13*get_least{3+9} 13>24 2|17b13 23l8 23t17
+13r24 q{7R9} 2|17b24 18r28 19r26
+14V13*is_empty{boolean} 14>23 2|10b13 14l8 14t16
+14r23 q{7R9} 2|10b23 11r26
+17A9 mem_space(3+9)<integer> 19r10 2|18r10 27r11 42r10
+19a7 a{17A9} 2|18m30 27m31 42m30
+20i7 n{natural} 2|4m28 11m28 19m28 28m29 43m29
+X 2 d_priority_queue.adb
+4i7 n{natural} 6r7
+11i7 n{natural} 13r14
+18a7 a{1|17A9} 22r14
+19i7 n{natural} 21r10
+27a7 a{1|17A9} 34r29 35r10 35r17 37r7
+28i7 n{natural} 32r10 33r7 33r11 33r21 33r29
+29i7 i{natural} 33m17 35r12 35m24 35r37 37r9
+30i7 pi{natural} 33m24 34r13 34r31 35r19 35r28 35m32
+42a7 a{1|17A9} 49r11 51r26 51r38 52r30 53r10 53r17 54r29 54r41 56r7
+43i7 n{natural} 48r10 49r13 49r17 49r21 51r15 52r19 54r18
+44*7 x{1|3+9} 49m7 52r38 56r14
+45i7 i{natural} 50m7 50r19 53r12 53m24 53r37 56r9
+46i7 ci{natural} 50m14 51r10 51r28 51r40 51m49 51r54 52r13 52r32 53r19 53r28
+. 53m32 54r13 54r31 54r43 54m52 54r57
+

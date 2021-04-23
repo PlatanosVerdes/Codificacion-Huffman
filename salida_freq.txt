@@ -1,0 +1,17 @@
+Letra:   apariciones:  6
+Letra: a apariciones:  3
+Letra: b apariciones:  1
+Letra: d apariciones:  2
+Letra: e apariciones:  6
+Letra: f apariciones:  2
+Letra: h apariciones:  1
+Letra: i apariciones:  1
+Letra: l apariciones:  1
+Letra: m apariciones:  2
+Letra: n apariciones:  2
+Letra: o apariciones:  1
+Letra: p apariciones:  1
+Letra: r apariciones:  2
+Letra: s apariciones:  1
+Letra: u apariciones:  2
+Letra: x apariciones:  2

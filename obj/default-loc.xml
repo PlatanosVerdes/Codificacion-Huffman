@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_file>
+    <file_marker column=" 1" line=" 17" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 39" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\mapac.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 12" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\mapac.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 49" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\d_priority_queue.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\d_priority_queue.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\darbolbinario.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\darbolbinario.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\mapac.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\src\mapac.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
