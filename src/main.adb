@@ -139,9 +139,10 @@ procedure Main is
       x:  Integer;  -- Item: Frecuencia
       it: iterador; -- Iterador
       nodo: node;   -- Nodo
-      auxArbol: arbol;
+      auxArbol: parbol;
    begin
-      avacio(auxArbol); --Arbol vacio
+      --auxArbol:= new arbol;
+      --avacio(auxArbol); --Arbol vacio
 
       primero(s, it);
       while es_valido(it) loop
@@ -151,7 +152,7 @@ procedure Main is
          nodo.frequencia:= x;
 
          --Crear arbol con solo la raiz
-         graft(arbol,auxArbol,auxArbol,nodo);
+         graft(arbol,null,null,nodo);
 
          --METER EL ARBOL AL HEAP
 
