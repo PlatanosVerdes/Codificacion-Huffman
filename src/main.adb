@@ -33,7 +33,7 @@ procedure Main is
       item1, item2: node;
    begin
       raiz(a1.all,item1);
-      raiz(a1.all,item2);
+      raiz(a2.all,item2);
       return item1.frequencia > item2.frequencia;
    end major;
 
@@ -42,7 +42,7 @@ procedure Main is
       item1, item2: node;
    begin
       raiz(a1.all,item1);
-      raiz(a1.all,item2);
+      raiz(a2.all,item2);
       return item1.frequencia < item2.frequencia or item1.frequencia = item2.frequencia;
    end menor;
    --Uso del package cola de prioridad
