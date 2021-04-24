@@ -50,11 +50,11 @@ procedure Main is
 
    -- FUNCIONES:
    -- ITERADOR
-   -- //// Función recorrido ////
+   -- Función recorrido
    -- Recorre el mapping y lo imprime por pantalla
    procedure recorrido(s: in conjunto) is
       k:  alfabet;  -- Key
-      x:  Integer;  -- Item
+      x:  Integer;  -- Item: Frecuencia
       it: iterador; -- Iterador
    begin
       primero(s, it);
@@ -66,14 +66,14 @@ procedure Main is
       end loop;
    end recorrido;
 
-   -- //// Función isSameAlf ////
+   -- Función isSameAlf
    -- Añade mira si dos tipos 'alfabet' son iguales.
    --function isSameAlf(a: in alfabet; b: in alfabet) return boolean is
    --begin
    --   return a = b;
    --end isSameAlf;
 
-   -- //// Función actFreqTabla ////
+   -- Función actFreqTabla
    -- Añade los caracteres al conjunto si no estan añadidos. Si lo estan,
    -- incrementamos la aparición (@param x)
    procedure actFreqTabla(s: in out conjunto; c: in alfabet) is
@@ -96,8 +96,9 @@ procedure Main is
       end if ;
    end actFreqTabla;
 
-   -- //// Función readText ////
-   -- Lee caracteres de un fichero
+   -- Función readTex()
+   -- Lee caracter a caracter de un fichero y Actualiza la frecuencia de los
+   -- caracteres
    procedure readFile(s: in out conjunto) is
       f_entrada: File_Type; --Fichero
       c:         alfabet;   --Caracter tipo alfabetico
@@ -112,8 +113,8 @@ procedure Main is
       Close(f_entrada);
    end readFile;
 
-   -- //// Función writeText ////
-   -- Lee caracteres de un fichero
+   -- Función writeText()
+   -- Escribe cada caracter con su frecuencia en un fichero
    procedure writeFile(s: in out conjunto) is
       f_salida: File_Type; --Fichero
       k:  alfabet;  -- Key
@@ -132,10 +133,36 @@ procedure Main is
       Close(f_salida);
    end writeFile;
 
+   --
+   procedure inIt_ArbolBin(s: in out conjunto; arbol: in out arbol) is
+      k:  alfabet;  -- Key
+      x:  Integer;  -- Item: Frecuencia
+      it: iterador; -- Iterador
+      nodo: node;   -- Nodo
+      auxArbol: arbol;
+   begin
+      avacio(auxArbol); --Arbol vacio
+
+      primero(s, it);
+      while es_valido(it) loop
+         obtener(s, it, k, x);
+
+         nodo.caracter:= k;
+         nodo.frequencia:= x;
+
+         --Crear arbol con solo la raiz
+         graft(arbol,auxArbol,auxArbol,nodo);
+
+         --METER EL ARBOL AL HEAP
+
+         siguiente(s, it);
+      end loop;
+   end inIt_ArbolBin;
+
    -- VARIABLES:
    s: conjunto;
 begin
-   cvacio(s);    --InIt
+   cvacio(s);    --InIt Mapping
    readFile(s);  --Leemos el fichero e incorporamos caracteres
    recorrido(s); --Imprimimos por pantalla las frecuencias
    writeFile(s); --Escribimos las frequencias
