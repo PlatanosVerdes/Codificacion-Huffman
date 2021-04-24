@@ -134,27 +134,28 @@ procedure Main is
    end writeFile;
 
    --
-   procedure inIt_ArbolBin(s: in out conjunto; arbol: in out arbol) is
+   procedure inIt_ArbolBin(s: in out conjunto; a: in out parbol) is
       k:  alfabet;  -- Key
       x:  Integer;  -- Item: Frecuencia
       it: iterador; -- Iterador
       nodo: node;   -- Nodo
-      auxArbol: parbol;
+      auxArbol: arbol;
    begin
-      --auxArbol:= new arbol;
-      --avacio(auxArbol); --Arbol vacio
+      avacio(auxArbol); --Arbol vacio
 
       primero(s, it);
       while es_valido(it) loop
          obtener(s, it, k, x);
 
+         --Asignamos los datos al nodo
          nodo.caracter:= k;
          nodo.frequencia:= x;
 
          --Crear arbol con solo la raiz
-         graft(arbol,null,null,nodo);
+         graft(a.all,auxArbol, auxArbol, nodo);
 
          --METER EL ARBOL AL HEAP
+         --
 
          siguiente(s, it);
       end loop;

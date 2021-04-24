@@ -1,3 +1,0 @@
-main.adb:137:62: formal parameter "arbol" cannot be used before end of specification
-main.adb:155:22: expected private type "arbol" defined at darbolbinario.ads:6, instance at line 26
-main.adb:155:22: found an access type
