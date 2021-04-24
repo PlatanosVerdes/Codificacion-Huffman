@@ -14,7 +14,7 @@ U d_priority_queue%b	d_priority_queue.adb	b7f4635f NE OO PK GE IL
 U d_priority_queue%s	d_priority_queue.ads	07464a0e BN EE NE OO PK GE IL
 
 D d_priority_queue.ads	20210419151348 07464a0e d_priority_queue%s
-D d_priority_queue.adb	20210419152956 b0b22951 d_priority_queue%b
+D d_priority_queue.adb	20210424120924 b0b22951 d_priority_queue%b
 D system.ads		20190518041258 32a08138 system%s
 G a e
 G c Z s b [d_priority_queue standard 6 9 none]
@@ -52,9 +52,9 @@ X 2 d_priority_queue.adb
 18a7 a{1|17A9} 22r14
 19i7 n{natural} 21r10
 27a7 a{1|17A9} 34r29 35r10 35r17 37r7
-28i7 n{natural} 32r10 33r7 33r11 33r21 33r29
-29i7 i{natural} 33m17 35r12 35m24 35r37 37r9
-30i7 pi{natural} 33m24 34r13 34r31 35r19 35r28 35m32
+28i7 n{natural} 32r10 33r7 33r11 33r20 33r28
+29i7 i{natural} 33m16 35r12 35m24 35r37 37r9
+30i7 pi{natural} 33m23 34r13 34r31 35r19 35r28 35m32
 42a7 a{1|17A9} 49r11 51r26 51r38 52r30 53r10 53r17 54r29 54r41 56r7
 43i7 n{natural} 48r10 49r13 49r17 49r21 51r15 52r19 54r18
 44*7 x{1|3+9} 49m7 52r38 56r14

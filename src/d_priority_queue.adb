@@ -30,7 +30,7 @@ package body d_priority_queue is
       pi: natural; --índice del padre del nodo i
    begin
       if n=size then raise space_overflow; end if;
-      n:= n+ 1; i:= n; pi:= n/2;
+      n:= n+1; i:= n; pi:= n/2;
       while pi > 0 and then a(pi) > x loop
          a(i):= a(pi); i:= pi; pi:= i/2;
       end loop;
