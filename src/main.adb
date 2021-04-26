@@ -3,8 +3,6 @@ with Ada.Integer_Text_IO;     use Ada.Integer_Text_IO;     -- Entrada y salida d
 with Ada.Characters.Handling; use Ada.Characters.Handling; -- Caracteres
 with mapac, darbolbinario, d_priority_queue;
 
---FALTA ORDENAR LA TABLA
-
 procedure Main is
 
    -- DECLARACIONES:
@@ -47,6 +45,7 @@ procedure Main is
    end menor;
    --Uso del package cola de prioridad
    package d_priority_queue_arbol is new d_priority_queue (size => 20, item => parbol, "<" => menor , ">" => major );
+   use d_priority_queue_arbol;
 
    -- FUNCIONES:
    -- ITERADOR
@@ -65,13 +64,6 @@ procedure Main is
          siguiente(s, it);
       end loop;
    end recorrido;
-
-   -- Función isSameAlf
-   -- Añade mira si dos tipos 'alfabet' son iguales.
-   --function isSameAlf(a: in alfabet; b: in alfabet) return boolean is
-   --begin
-   --   return a = b;
-   --end isSameAlf;
 
    -- Función actFreqTabla
    -- Añade los caracteres al conjunto si no estan añadidos. Si lo estan,
@@ -133,13 +125,16 @@ procedure Main is
       Close(f_salida);
    end writeFile;
 
-   --
-   procedure inIt_ArbolBin(s: in out conjunto; a: in out parbol) is
-      k:  alfabet;  -- Key
+   -- Funcion inIt_ArbolBin()
+   -- Crea un arbol binario de un solo nodo que contenga la pareja
+   -- clave-valor. Y lo el arbol binario de un solo nodo en la cola de prioridad.
+   procedure inIt_ArbolBin(s: in out conjunto; h: in out priority_queue) is
+      k:  alfabet;  -- Key: Alfabeto
       x:  Integer;  -- Item: Frecuencia
       it: iterador; -- Iterador
       nodo: node;   -- Nodo
-      auxArbol: arbol;
+      a: parbol;     --Arbol a meter
+      auxArbol: arbol; --Arbol vacio a meter
    begin
       avacio(auxArbol); --Arbol vacio
 
@@ -151,21 +146,26 @@ procedure Main is
          nodo.caracter:= k;
          nodo.frequencia:= x;
 
-         --Crear arbol con solo la raiz
+         --Crear un arbol con solo la raiz
+         a := new arbol;
+         avacio(a.all);
          graft(a.all,auxArbol, auxArbol, nodo);
 
-         --METER EL ARBOL AL HEAP
-         --
+         -- Meter el arbol en el HEAP
+         put (h, a);
 
          siguiente(s, it);
       end loop;
    end inIt_ArbolBin;
 
    -- VARIABLES:
-   s: conjunto;
+   s: conjunto; --Conjunto para el mapping
+   h: priority_queue; --Heap
 begin
    cvacio(s);    --InIt Mapping
+   empty(h);     --InIt Heap
    readFile(s);  --Leemos el fichero e incorporamos caracteres
-   recorrido(s); --Imprimimos por pantalla las frecuencias
-   writeFile(s); --Escribimos las frequencias
+   inIt_ArbolBin(s,h);
+   -- recorrido(s); --Imprimimos por pantalla las frecuencias
+   -- writeFile(s); --Escribimos las frequencias
 end Main;

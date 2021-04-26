@@ -3,10 +3,14 @@ generic
    type item is private;
    with function "<" (x1,x2 : in item) return boolean;
    with function ">" (x1,x2 : in item) return boolean;
+
 package d_priority_queue is
+
    type priority_queue is limited private;
+
    space_overflow: exception;
    bad_use: exception;
+
    procedure empty (q : out priority_queue);
    procedure put (q : in out priority_queue; x : in item);
    procedure delete_least (q : in out priority_queue);
