@@ -158,6 +158,36 @@ procedure Main is
       end loop;
    end inIt_ArbolBin;
 
+   --Funcion arbolHuffman()
+   procedure arbolHuffman (h: in out priority_queue) is
+      nodoIz: node;   -- Nodo Derecho
+      nodoDr: node;   -- Nodo Izquierdo
+      nodo: node;     -- Nodo Nuevo
+      aIzq: parbol;   --Arbol izquierdo
+      aDr: parbol;    --Arbol derecho
+      a: parbol;      --Arbol nuevo
+   begin
+      while not is_empty(h) loop
+         -- Extraer el elemento con menos frecuencia
+         aIzq := get_least (h);
+         delete_least (h);
+
+         if not is_empty (h) then
+            -- Contenia dos elementos (o mas )
+            aDr := get_least (h);
+         end if;
+
+         --Logica de crear un nuevo arbol con el nuevo nodo con la suma de las frq y un caracter "-"
+      end loop;
+      --Meter el t1 en el heap
+   end arbolHuffman;
+
+   --Funcion recorridoAmplitud()
+   procedure recorridoAmplitud (h: in out priority_queue) is
+   begin
+
+   end recorridoAmplitud;
+
    -- VARIABLES:
    s: conjunto; --Conjunto para el mapping
    h: priority_queue; --Heap
