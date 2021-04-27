@@ -1,4 +1,4 @@
-V "GNAT Lib v2019"
+V "GNAT Lib v2020"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -8,15 +8,14 @@ RN
 RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_EXCEPTIONS
 RV NO_IMPLEMENTATION_PRAGMAS
-RV SPARK_05
 
 U mapac%b		mapac.adb		28f1d1d4 NE OO PK GE IL
 
 U mapac%s		mapac.ads		4b78bb93 BN EE NE OO PK GE IL
 
-D mapac.ads		20210412155500 4b78bb93 mapac%s
-D mapac.adb		20210418170938 63896a47 mapac%b
-D system.ads		20190518041258 32a08138 system%s
+D mapac.ads		20210425072306 4b78bb93 mapac%s
+D mapac.adb		20210425072306 63896a47 mapac%b
+D system.ads		20200819050648 32a08138 system%s
 G a e
 G c Z s b [mapac standard 5 9 none]
 X 1 mapac.ads

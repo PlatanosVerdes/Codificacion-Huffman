@@ -1,22 +1,23 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\jorge\Documents\ADAProjects\Practica2\default.gpr
-20210412144752
+K:\GitHub\Codificacion-Huffman\default.gpr
+20210425072306 4620a735ea66a8d11c92812773863cbb
 [BOUND OBJECT FILES]
-C:\Users\jorge\Documents\ADAProjects\Practica2\obj\d_priority_queue.o
-C:\Users\jorge\Documents\ADAProjects\Practica2\obj\darbolbinario.o
-C:\Users\jorge\Documents\ADAProjects\Practica2\obj\mapac.o
-C:\Users\jorge\Documents\ADAProjects\Practica2\obj\main.o
+K:\GitHub\Codificacion-Huffman\obj\d_priority_queue.o
+K:\GitHub\Codificacion-Huffman\obj\darbolbinario.o
+K:\GitHub\Codificacion-Huffman\obj\dcola.o
+K:\GitHub\Codificacion-Huffman\obj\mapac.o
+K:\GitHub\Codificacion-Huffman\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LC:\Users\jorge\Documents\ADAProjects\Practica2\obj\
--LC:\Users\jorge\Documents\ADAProjects\Practica2\obj\
--LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+-LK:\GitHub\Codificacion-Huffman\obj\
+-LK:\GitHub\Codificacion-Huffman\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
 -static
 -static-libgcc
-C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnat.a
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
 -Wl,--stack=0x2000000

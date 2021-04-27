@@ -1,7 +1,7 @@
 with Ada.Text_IO;             use Ada.Text_IO;             -- Archivos
 with Ada.Integer_Text_IO;     use Ada.Integer_Text_IO;     -- Entrada y salida de valores enteros
 with Ada.Characters.Handling; use Ada.Characters.Handling; -- Caracteres
-with mapac, darbolbinario, d_priority_queue;
+with mapac, darbolbinario, d_priority_queue,dcola;
 
 procedure Main is
 
@@ -35,7 +35,7 @@ procedure Main is
       return item1.frequencia > item2.frequencia;
    end major;
 
-    --Funcion menor o igual: Compara si un arbol "frecuencia" es menor o igual que otro
+   --Funcion menor o igual: Compara si un arbol "frecuencia" es menor o igual que otro
    function menor(a1,a2: in parbol) return boolean is
       item1, item2: node;
    begin
@@ -166,7 +166,11 @@ procedure Main is
       aIzq: parbol;   --Arbol izquierdo
       aDr: parbol;    --Arbol derecho
       a: parbol;      --Arbol nuevo
+
    begin
+      aIzq:=new arbol;
+      aDr:=new arbol;
+      a:=new arbol;
       while not is_empty(h) loop
          -- Extraer el elemento con menos frecuencia
          aIzq := get_least (h);
@@ -175,8 +179,14 @@ procedure Main is
          if not is_empty (h) then
             -- Contenia dos elementos (o mas )
             aDr := get_least (h);
+            delete_least (h);
          end if;
-
+         raiz(aIzq.all,nodoIz);
+         raiz(aDr.all,nodoDr);
+         nodo.frequencia:=nodoIz.frequencia+nodoDr.frequencia;
+         nodo.caracter:='-';
+         graft(a.all,aDr.all,aIzq.all,nodo);
+         put(h,a);
          --Logica de crear un nuevo arbol con el nuevo nodo con la suma de las frq y un caracter "-"
       end loop;
       --Meter el t1 en el heap
@@ -184,8 +194,35 @@ procedure Main is
 
    --Funcion recorridoAmplitud()
    procedure recorridoAmplitud (h: in out priority_queue) is
-   begin
+      package dcolaA is new dcola(parbol);
 
+      use dcolaA;
+      q: cola;
+      arbolAux: parbol; --arborl auxiliar
+      arbolAux2: parbol;
+      nodoParaImprimir: node;   -- Nodo
+
+   begin
+      arbolAux := new arbol;
+      arbolAux2:=new arbol;
+      arbolAux:=get_least(h);
+      poner(q,arbolAux);
+
+      while not esta_vacia(q) loop
+         arbolAux:=coger_primero(q);
+         raiz(arbolAux.all,nodoParaImprimir);
+         Put_Line("Letra: " & nodoParaImprimir.caracter & " apariciones: " & nodoParaImprimir.frequencia'Img);
+         izq(arbolAux.all,arbolAux2.all);
+
+         if not esta_vacio(arbolAux2.all) then
+            poner(q,arbolAux2);
+         end if;
+
+         der(arbolAux.all,arbolAux2.all);
+         if not esta_vacio(arbolAux2.all) then
+            poner(q,arbolAux2);
+         end if;
+      end loop;
    end recorridoAmplitud;
 
    -- VARIABLES:
@@ -196,6 +233,8 @@ begin
    empty(h);     --InIt Heap
    readFile(s);  --Leemos el fichero e incorporamos caracteres
    inIt_ArbolBin(s,h);
+   arbolHuffman(h);
+   recorridoAmplitud(h);
    -- recorrido(s); --Imprimimos por pantalla las frecuencias
    -- writeFile(s); --Escribimos las frequencias
 end Main;
