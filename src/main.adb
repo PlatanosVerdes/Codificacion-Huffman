@@ -271,7 +271,7 @@ procedure Main is
       aHf: parbol;   --Arbol de Huffman
       trobat: Boolean;
 
-      print: String(1..5);
+      print: String(1..50);
    begin
       trobat := false;
       --Sacar el arbol de huffman
