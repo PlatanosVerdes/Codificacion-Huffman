@@ -9,6 +9,12 @@ procedure Main is
    --Caracteres del espacio y caracteres alfabeticos en minusclula
    subtype alfabet is Character range ' '.. 'z';
 
+   --Estructura codigo
+   type tcodi is record
+      c: String(1..50); -- c: array de caracteres (0, 1)
+      l: integer;       -- l: natural que indica la longitud del codigo
+   end record ;
+
    --MAPPING:
    --Uso del package mapping
    package d_taula_frequencias is new mapac (key => alfabet ,item => Integer);
@@ -49,7 +55,7 @@ procedure Main is
 
    -- FUNCIONES:
    -- ITERADOR
-   -- Función recorrido
+   -- Funcion recorrido
    -- Recorre el mapping y lo imprime por pantalla
    procedure recorrido(s: in conjunto) is
       k:  alfabet;  -- Key
@@ -65,9 +71,9 @@ procedure Main is
       end loop;
    end recorrido;
 
-   -- Función actFreqTabla
-   -- Añade los caracteres al conjunto si no estan añadidos. Si lo estan,
-   -- incrementamos la aparición (@param x)
+   -- Funcion actFreqTabla
+   -- Anade los caracteres al conjunto si no estan aï¿½adidos. Si lo estan,
+   -- incrementamos la aparicion (@param x)
    procedure actFreqTabla(s: in out conjunto; c: in alfabet) is
       found: boolean;
       it:    iterador;
@@ -88,7 +94,7 @@ procedure Main is
       end if ;
    end actFreqTabla;
 
-   -- Función readTex()
+   -- Funcion readFile()
    -- Lee caracter a caracter de un fichero y Actualiza la frecuencia de los
    -- caracteres
    procedure readFile(s: in out conjunto) is
@@ -104,26 +110,6 @@ procedure Main is
       end loop;
       Close(f_entrada);
    end readFile;
-
-   -- Función writeText()
-   -- Escribe cada caracter con su frecuencia en un fichero
-   procedure writeFile(s: in out conjunto) is
-      f_salida: File_Type; --Fichero
-      k:  alfabet;  -- Key
-      x:  Integer;  -- Item
-      it: iterador; -- Iterador
-   begin
-      --Creamos fichero
-      Create(f_salida, mode => Out_File,name => "salida_freq.txt");
-      --Recorrido por el conjunto
-      primero(s, it);
-      while es_valido(it) loop
-         obtener(s, it, k, x);
-         put_line(f_salida,"Letra: " & k & " apariciones: " & x'Img);
-         siguiente(s, it);
-      end loop;
-      Close(f_salida);
-   end writeFile;
 
    -- Funcion inIt_ArbolBin()
    -- Crea un arbol binario de un solo nodo que contenga la pareja
@@ -168,9 +154,7 @@ procedure Main is
       a: parbol;      --Arbol nuevo
 
    begin
-      aIzq:=new arbol;
-      aDr:=new arbol;
-      a:=new arbol;
+
       while not is_empty(h) loop
          -- Extraer el elemento con menos frecuencia
          aIzq := get_least (h);
@@ -180,19 +164,29 @@ procedure Main is
             -- Contenia dos elementos (o mas )
             aDr := get_least (h);
             delete_least (h);
+
+            --Logica de crear un nuevo arbol con el nuevo nodo con la suma de las frq y un caracter "-"
+            raiz(aIzq.all,nodoIz);
+            raiz(aDr.all,nodoDr);
+            nodo.frequencia:= nodoIz.frequencia+nodoDr.frequencia;
+            nodo.caracter:='-';
+
+            a:=new arbol;
+
+            graft(a.all,aIzq.all,aDr.all,nodo);
+            put(h,a);
          end if;
-         raiz(aIzq.all,nodoIz);
-         raiz(aDr.all,nodoDr);
-         nodo.frequencia:=nodoIz.frequencia+nodoDr.frequencia;
-         nodo.caracter:='-';
-         graft(a.all,aDr.all,aIzq.all,nodo);
-         put(h,a);
-         --Logica de crear un nuevo arbol con el nuevo nodo con la suma de las frq y un caracter "-"
+
       end loop;
-      --Meter el t1 en el heap
+
+      --Meter el "ultimo arbol" en el heap
+      --Tendremos el arbol de Huffman en el heap
+      put(h,aIzq);
    end arbolHuffman;
 
    --Funcion recorridoAmplitud()
+   --Recorrido del arbol de Huffman que imprime por apariciones las frecuencias
+   --de los caracteres
    procedure recorridoAmplitud (h: in out priority_queue) is
       package dcolaA is new dcola(parbol);
 
@@ -200,24 +194,25 @@ procedure Main is
       q: cola;
       arbolAux: parbol; --arborl auxiliar
       arbolAux2: parbol;
-      nodoParaImprimir: node;   -- Nodo
+      nodoPnt: node;   -- Nodo
 
    begin
-      arbolAux := new arbol;
-      arbolAux2:=new arbol;
       arbolAux:=get_least(h);
       poner(q,arbolAux);
 
       while not esta_vacia(q) loop
          arbolAux:=coger_primero(q);
-         raiz(arbolAux.all,nodoParaImprimir);
-         Put_Line("Letra: " & nodoParaImprimir.caracter & " apariciones: " & nodoParaImprimir.frequencia'Img);
+         borrar_primero(q);
+
+         raiz(arbolAux.all,nodoPnt);
+         Put_Line("Letra: " & nodoPnt.caracter & " apariciones: " & nodoPnt.frequencia'Img);
+         arbolAux2:=new arbol;
          izq(arbolAux.all,arbolAux2.all);
 
          if not esta_vacio(arbolAux2.all) then
             poner(q,arbolAux2);
          end if;
-
+         arbolAux2:=new arbol;
          der(arbolAux.all,arbolAux2.all);
          if not esta_vacio(arbolAux2.all) then
             poner(q,arbolAux2);
@@ -225,16 +220,90 @@ procedure Main is
       end loop;
    end recorridoAmplitud;
 
+   --Procedimiento: genera_codi()
+   --Generar el codigo binario asociado al caracter recorriendo el arbol.
+   procedure genera_codi (x: in arbol ; c: in character ; trobat :in out boolean ; idx : in integer ; codi : in out tcodi ) is
+      nodo: node;
+      l, r: arbol;
+   begin
+      -- visitar nodo consiste en:
+      -- comprobar si la raiz del arbol contiene el caracter
+      if not esta_vacio(x) then
+
+         raiz(x,nodo);
+         trobat := nodo.caracter = c;
+
+         if not trobat then
+            -- Si no se ha encontrado el caracter :
+            -- Bajar hacia el hijo izquierdo y anadir un '0'
+            avacio(l);
+            izq(x, l);
+            if not esta_vacio(l) then
+               codi.c(idx) := '0';
+               codi.l := idx ;
+               genera_codi (l, c, trobat , idx +1, codi );
+            end if;
+         end if;
+
+         if not trobat then
+            -- Si no se ha encontrado el caracter :
+            -- Bajar hacia el hijo derecho y anadir un '1'
+            avacio(r);
+            der(x, r);
+            if not esta_vacio (r) then
+               codi.c(idx) := '1';
+               codi.l := idx ;
+               genera_codi (r, c, trobat, idx +1, codi);
+            end if;
+         end if;
+      end if;
+   end genera_codi;
+
+
+   -- Funcion writeText()
+   -- Escribe cada caracter con su frecuencia en un fichero
+   procedure writeFile(s: in out conjunto; h: in out priority_queue) is
+      f_salida: File_Type; --Fichero
+      k:  alfabet;  -- Key
+      x:  Integer;  -- Item
+      it: iterador; -- Iterador
+      code: tcodi;  --Estructura codigo
+      aHf: parbol;   --Arbol de Huffman
+      trobat: Boolean;
+
+      print: String(1..5);
+   begin
+      trobat := false;
+      --Sacar el arbol de huffman
+      aHf:=get_least(h);
+      --Creamos fichero
+      Create(f_salida, mode => Out_File,name => "salida_freq.txt");
+      --Recorrido por el conjunto
+      primero(s, it);
+      while es_valido(it) loop
+         obtener(s, it, k, x);
+
+         genera_codi(aHf.all,k, trobat, 1 ,code);
+
+         print(1..code.l) := String(code.c)(1..code.l);
+         put_line(f_salida,"Letra: " & k & " codigo: " & print);
+
+         trobat := false;
+         siguiente(s, it);
+      end loop;
+      Close(f_salida);
+   end writeFile;
+
    -- VARIABLES:
    s: conjunto; --Conjunto para el mapping
    h: priority_queue; --Heap
 begin
-   cvacio(s);    --InIt Mapping
-   empty(h);     --InIt Heap
-   readFile(s);  --Leemos el fichero e incorporamos caracteres
-   inIt_ArbolBin(s,h);
-   arbolHuffman(h);
-   recorridoAmplitud(h);
-   -- recorrido(s); --Imprimimos por pantalla las frecuencias
-   -- writeFile(s); --Escribimos las frequencias
+   cvacio(s);            --InIt Mapping
+   empty(h);             --InIt Heap
+   readFile(s);          --Leemos el fichero e incorporamos caracteres
+   inIt_ArbolBin(s,h);   --Init arbolbinario
+   arbolHuffman(h);      --Creamos el arbol de Huffman
+   --recorridoAmplitud(h); --Visualizamos el arbol de Huffman
+   --recorrido(s);      --Imprimimos por pantalla las frecuencias
+   writeFile(s,h);      --Escribimos las frequencias
 end Main;
