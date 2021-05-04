@@ -225,6 +225,7 @@ procedure Main is
    procedure genera_codi (x: in arbol ; c: in character ; trobat :in out boolean ; idx : in integer ; codi : in out tcodi ) is
       nodo: node;
       l, r: arbol;
+
    begin
       -- visitar nodo consiste en:
       -- comprobar si la raiz del arbol contiene el caracter
@@ -232,6 +233,9 @@ procedure Main is
 
          raiz(x,nodo);
          trobat := nodo.caracter = c;
+
+
+
 
          if not trobat then
             -- Si no se ha encontrado el caracter :
@@ -256,6 +260,7 @@ procedure Main is
                genera_codi (r, c, trobat, idx +1, codi);
             end if;
          end if;
+
       end if;
    end genera_codi;
 
@@ -270,8 +275,8 @@ procedure Main is
       code: tcodi;  --Estructura codigo
       aHf: parbol;   --Arbol de Huffman
       trobat: Boolean;
+      i: integer;
 
-      print: String(1..50);
    begin
       trobat := false;
       --Sacar el arbol de huffman
@@ -284,9 +289,15 @@ procedure Main is
          obtener(s, it, k, x);
 
          genera_codi(aHf.all,k, trobat, 1 ,code);
+         i:=1;
 
-         print(1..code.l) := String(code.c)(1..code.l);
-         put_line(f_salida,"Letra: " & k & " codigo: " & print);
+
+            put(f_salida,"Letra: " & k & " codigo: ");
+
+            for i in 1..code.l loop
+               put(f_salida,code.c(i));
+            end loop;
+            put_line(f_salida, " ");
 
          trobat := false;
          siguiente(s, it);

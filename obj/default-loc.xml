@@ -1,137 +1,18 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
+  <Project>
+    <vfs_file>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
       <vfs_project />
       <vfs_file>C:\GNAT\2020\bin\src\main.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 192" >
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
       <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 196" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 163" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 186" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 179" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 18" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 158" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 62" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 63" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 64" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 199" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
     </file_marker>
     <file_marker column=" 12" line=" 42" >
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
@@ -139,11 +20,15 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\mapac.adb</vfs_file>
+      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 21" line=" 18" >
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
+      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 22" >
+      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
+      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
@@ -153,195 +38,11 @@
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
       <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 9" line=" 228" >
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
       <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\mapac.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 36" line=" 217" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 186" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 241" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 184" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 205" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 184" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 30" line=" 182" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 176" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 205" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 184" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 24" line=" 187" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 184" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 47" line=" 222" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 184" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 205" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 184" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 178" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 184" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 30" line=" 180" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 188" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\dcola.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\mapac.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 222" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 188" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 19" line=" 212" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 188" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>K:\GitHub\Codificacion-Huffman\src\d_priority_queue.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker current="true" column=" 34" line=" 234" >
       <vfs_project>K:\GitHub\Codificacion-Huffman\default.gpr</vfs_project>
       <vfs_file>K:\GitHub\Codificacion-Huffman\src\main.adb</vfs_file>
     </file_marker>
