@@ -1,4 +1,4 @@
-V "GNAT Lib v2020"
+V "GNAT Lib v2019"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -7,14 +7,15 @@ P ZX
 RN
 RV NO_EXCEPTIONS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
 
 U d_priority_queue%b	d_priority_queue.adb	b7f4635f NE OO PK GE IL
 
 U d_priority_queue%s	d_priority_queue.ads	07464a0e BN EE NE OO PK GE IL
 
-D d_priority_queue.ads	20210427082836 07464a0e d_priority_queue%s
-D d_priority_queue.adb	20210425072306 b0b22951 d_priority_queue%b
-D system.ads		20200819050648 32a08138 system%s
+D d_priority_queue.ads	20210427095750 07464a0e d_priority_queue%s
+D d_priority_queue.adb	20210427095750 b0b22951 d_priority_queue%b
+D system.ads		20190518041258 32a08138 system%s
 G a e
 G c Z s b [d_priority_queue standard 7 9 none]
 X 1 d_priority_queue.ads

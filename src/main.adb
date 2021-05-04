@@ -176,7 +176,6 @@ procedure Main is
             graft(a.all,aIzq.all,aDr.all,nodo);
             put(h,a);
          end if;
-
       end loop;
 
       --Meter el "ultimo arbol" en el heap
@@ -234,9 +233,6 @@ procedure Main is
          raiz(x,nodo);
          trobat := nodo.caracter = c;
 
-
-
-
          if not trobat then
             -- Si no se ha encontrado el caracter :
             -- Bajar hacia el hijo izquierdo y anadir un '0'
@@ -245,7 +241,7 @@ procedure Main is
             if not esta_vacio(l) then
                codi.c(idx) := '0';
                codi.l := idx ;
-               genera_codi (l, c, trobat , idx +1, codi );
+               genera_codi (l, c, trobat , idx +1, codi);
             end if;
          end if;
 
@@ -278,6 +274,7 @@ procedure Main is
       i: integer;
 
    begin
+      code.l:=1;
       trobat := false;
       --Sacar el arbol de huffman
       aHf:=get_least(h);
@@ -299,7 +296,7 @@ procedure Main is
             end loop;
             put_line(f_salida, " ");
 
-         trobat := false;
+         --trobat := false;
          siguiente(s, it);
       end loop;
       Close(f_salida);

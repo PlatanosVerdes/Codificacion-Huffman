@@ -1,4 +1,4 @@
-V "GNAT Lib v2020"
+V "GNAT Lib v2019"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -11,14 +11,15 @@ RV NO_EXCEPTIONS
 RV NO_LOCAL_ALLOCATORS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
 
 U darbolbinario%b	darbolbinario.adb	1f26993a NE OO PK GE IL
 
 U darbolbinario%s	darbolbinario.ads	5add0a4a BN EE NE OO PK GE IL
 
-D darbolbinario.ads	20210425072306 5add0a4a darbolbinario%s
-D darbolbinario.adb	20210425072306 45fb9370 darbolbinario%b
-D system.ads		20200819050648 32a08138 system%s
+D darbolbinario.ads	20210427095750 5add0a4a darbolbinario%s
+D darbolbinario.adb	20210427095750 45fb9370 darbolbinario%b
+D system.ads		20190518041258 32a08138 system%s
 G a e
 G c Z s b [darbolbinario standard 4 9 none]
 X 1 darbolbinario.ads
