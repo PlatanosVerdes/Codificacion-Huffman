@@ -115,11 +115,11 @@ procedure Main is
    -- Crea un arbol binario de un solo nodo que contenga la pareja
    -- clave-valor. Y lo el arbol binario de un solo nodo en la cola de prioridad.
    procedure inIt_ArbolBin(s: in out conjunto; h: in out priority_queue) is
-      k:  alfabet;  -- Key: Alfabeto
-      x:  Integer;  -- Item: Frecuencia
-      it: iterador; -- Iterador
-      nodo: node;   -- Nodo
-      a: parbol;     --Arbol a meter
+      k:  alfabet;     -- Key: Alfabeto
+      x:  Integer;     -- Item: Frecuencia
+      it: iterador;    -- Iterador
+      nodo: node;      -- Nodo
+      a: parbol;       --Arbol a meter
       auxArbol: arbol; --Arbol vacio a meter
    begin
       avacio(auxArbol); --Arbol vacio
@@ -288,7 +288,6 @@ procedure Main is
          genera_codi(aHf.all,k, trobat, 1 ,code);
          i:=1;
 
-
             put(f_salida,"Letra: " & k & " codigo: ");
 
             for i in 1..code.l loop
@@ -296,7 +295,7 @@ procedure Main is
             end loop;
             put_line(f_salida, " ");
 
-         --trobat := false;
+         trobat := false;
          siguiente(s, it);
       end loop;
       Close(f_salida);
@@ -309,9 +308,9 @@ begin
    cvacio(s);            --InIt Mapping
    empty(h);             --InIt Heap
    readFile(s);          --Leemos el fichero e incorporamos caracteres
+   --recorrido(s);      --Imprimimos por pantalla las frecuencias
    inIt_ArbolBin(s,h);   --Init arbolbinario
    arbolHuffman(h);      --Creamos el arbol de Huffman
    --recorridoAmplitud(h); --Visualizamos el arbol de Huffman
-   --recorrido(s);      --Imprimimos por pantalla las frecuencias
    writeFile(s,h);      --Escribimos las frequencias
 end Main;

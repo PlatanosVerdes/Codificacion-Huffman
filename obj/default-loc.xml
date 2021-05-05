@@ -2,13 +2,9 @@
 <Locations >
   <Project>
     <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\default.gpr</vfs_file>
-    <file_marker column=" 1" line=" 180" >
+    <file_marker current="true" column=" 1" line=" 263" >
       <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\default.gpr</vfs_project>
       <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
-      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\default.gpr</vfs_project>
-      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\src\d_priority_queue.ads</vfs_file>
     </file_marker>
   </Project>
   <Project >
