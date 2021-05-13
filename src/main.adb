@@ -72,8 +72,8 @@ procedure Main is
    end recorrido;
 
    -- Funcion actFreqTabla
-   -- Anade los caracteres al conjunto si no estan a�adidos. Si lo estan,
-   -- incrementamos la aparicion (@param x)
+   -- Anade los caracteres al conjunto y si lo estan,
+   -- incrementamos la aparicion de dicho parametro.
    procedure actFreqTabla(s: in out conjunto; c: in alfabet) is
       found: boolean;
       it:    iterador;
@@ -95,7 +95,7 @@ procedure Main is
    end actFreqTabla;
 
    -- Funcion readFile()
-   -- Lee caracter a caracter de un fichero y Actualiza la frecuencia de los
+   -- Lee caracter a caracter de un fichero actualizando la frecuencia de los
    -- caracteres
    procedure readFile(s: in out conjunto) is
       f_entrada: File_Type; --Fichero
@@ -112,8 +112,8 @@ procedure Main is
    end readFile;
 
    -- Funcion inIt_ArbolBin()
-   -- Crea un arbol binario de un solo nodo que contenga la pareja
-   -- clave-valor. Y lo el arbol binario de un solo nodo en la cola de prioridad.
+   -- Crea un arbol binario de un solo nodo que contenga la pareja clave-valor.
+   -- Y metemos el arbol binario de un solo nodo en la cola de prioridad.
    procedure inIt_ArbolBin(s: in out conjunto; h: in out priority_queue) is
       k:  alfabet;     -- Key: Alfabeto
       x:  Integer;     -- Item: Frecuencia
@@ -145,6 +145,8 @@ procedure Main is
    end inIt_ArbolBin;
 
    --Funcion arbolHuffman()
+   -- Crea un arbol binario con la codificacion de Huffman. Al finalizar
+   -- tendremos el arbol en el conjunto "heap".
    procedure arbolHuffman (h: in out priority_queue) is
       nodoIz: node;   -- Nodo Derecho
       nodoDr: node;   -- Nodo Izquierdo
@@ -183,17 +185,17 @@ procedure Main is
       put(h,aIzq);
    end arbolHuffman;
 
-   --Funcion recorridoAmplitud()
-   --Recorrido del arbol de Huffman que imprime por apariciones las frecuencias
-   --de los caracteres
+   -- Funcion recorridoAmplitud()
+   -- Recorrido en amplitud del arbol de Huffman, contenido en el heap.
    procedure recorridoAmplitud (h: in out priority_queue) is
+      --Utilizaremos una cola
       package dcolaA is new dcola(parbol);
-
       use dcolaA;
+
       q: cola;
       arbolAux: parbol; --arborl auxiliar
       arbolAux2: parbol;
-      nodoPnt: node;   -- Nodo
+      nodoPnt: node;    -- Nodo
 
    begin
       arbolAux:=get_least(h);
@@ -219,8 +221,9 @@ procedure Main is
       end loop;
    end recorridoAmplitud;
 
-   --Procedimiento: genera_codi()
-   --Generar el codigo binario asociado al caracter recorriendo el arbol.
+   -- Procedimiento: genera_codi()
+   -- Generar el codigo binario asociado al caracter, correspondiente a la
+   -- codificacion de huffman, recorriendo el arbol.
    procedure genera_codi (x: in arbol ; c: in character ; trobat :in out boolean ; idx : in integer ; codi : in out tcodi ) is
       nodo: node;
       l, r: arbol;
@@ -262,14 +265,15 @@ procedure Main is
 
 
    -- Funcion writeText()
-   -- Escribe cada caracter con su frecuencia en un fichero
+   -- Escribe cada caracter con su frecuencia y codificacion de Huffman
+   -- correspondiente en un fichero.
    procedure writeFile(s: in out conjunto; h: in out priority_queue) is
       f_salida: File_Type; --Fichero
       k:  alfabet;  -- Key
       x:  Integer;  -- Item
       it: iterador; -- Iterador
       code: tcodi;  --Estructura codigo
-      aHf: parbol;   --Arbol de Huffman
+      aHf: parbol;  --Arbol de Huffman
       trobat: Boolean;
       i: integer;
 
@@ -285,15 +289,16 @@ procedure Main is
       while es_valido(it) loop
          obtener(s, it, k, x);
 
+         --Generar codigo
          genera_codi(aHf.all,k, trobat, 1 ,code);
+
+         --Escribir en el fichero
+         put(f_salida,"Letra: " & k & " codigo: ");
          i:=1;
-
-            put(f_salida,"Letra: " & k & " codigo: ");
-
-            for i in 1..code.l loop
-               put(f_salida,code.c(i));
-            end loop;
-            put_line(f_salida, " ");
+         for i in 1..code.l loop
+            put(f_salida,code.c(i));
+         end loop;
+         put_line(f_salida, " ");
 
          trobat := false;
          siguiente(s, it);
@@ -307,10 +312,12 @@ procedure Main is
 begin
    cvacio(s);            --InIt Mapping
    empty(h);             --InIt Heap
+
    readFile(s);          --Leemos el fichero e incorporamos caracteres
-   --recorrido(s);      --Imprimimos por pantalla las frecuencias
+   --recorrido(s);         --Imprimimos por pantalla las frecuencias
    inIt_ArbolBin(s,h);   --Init arbolbinario
    arbolHuffman(h);      --Creamos el arbol de Huffman
    --recorridoAmplitud(h); --Visualizamos el arbol de Huffman
-   writeFile(s,h);      --Escribimos las frequencias
+   writeFile(s,h);       --Escribimos las frequencias
+
 end Main;
