@@ -3,8 +3,10 @@ with Ada.Integer_Text_IO;     use Ada.Integer_Text_IO;     -- Entrada y salida d
 with Ada.Characters.Handling; use Ada.Characters.Handling; -- Caracteres
 with mapac, darbolbinario, d_priority_queue,dcola;
 
-procedure Main is
 
+--Proyecto: Practica 2 - Codificacion-Huffman
+--Autor: Jorge Gonzalez Pascual
+procedure Main is
    -- DECLARACIONES:
    --Caracteres del espacio y caracteres alfabeticos en minusclula
    subtype alfabet is Character range ' '.. 'z';

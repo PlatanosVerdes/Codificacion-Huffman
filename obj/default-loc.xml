@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\default.gpr</vfs_file>
-    <file_marker current="true" column=" 33" line=" 50" >
+  <Project >
+    <file_marker column=" 46" line=" 7" >
       <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\default.gpr</vfs_project>
       <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 25" line=" 23" >
+      <vfs_project>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\default.gpr</vfs_project>
+      <vfs_file>C:\Users\jorge\Documents\ADAProjects\Practica2\Codificacion-Huffman\src\darbolbinario.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >
